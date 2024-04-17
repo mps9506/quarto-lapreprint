@@ -1,0 +1,9 @@
+examples/
+LICENSE
+DESCRIPTION
+.github/
+.gitignore
+screenshots/
+quarto-lapreprint.rproj
+template.pdf
+template.typ
