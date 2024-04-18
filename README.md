@@ -7,6 +7,8 @@ This is a typst template for quarto users. The original typst template is from [
 
 [^distribution]: This is a modified redistribution of the original LaPreprint](https://github.com/LaPreprint/typst) Typst template created by Rowan Cockett and distributed under the MIT license. 
 
+![Overview](screenshots/overview.png)
+
 ## Installing
 
 ```bash
