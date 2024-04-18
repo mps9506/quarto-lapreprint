@@ -517,38 +517,23 @@
   margin: (
           (
         title: "Key Points",
-        content: [
-                    - This project found #strong[super] interesting stuff.
-                    - This paper discusses what we found.
-                    - You can use #sub[markdown] here.
-                  ],
-      ),
-                      (
-        title: "Correspondence to",
-        content: [
-          Rowan Cockett
-          #link("mailto:rowan\@curvenote.com")[rowan\@curvenote.com]
-          ],
-      ),
-                                      (
-        title: "Data Availability",
-        content: [
-          Associated notebooks are available on #link("%22https://github.com/simpeg/tle-finitevolume%22")[GitHub] and can be run online with #link("%22http://mybinder.org/repo/simpeg/tle-finitevolume%22")[MyBinder];.
+        content: [- key point 1 is #emph[important];.
+- key point 2 is also important.
+- this is the third idea.
 
-        ],
+]
       ),
-              (
+          (
+        title: "Data Statement",
+        content: [Associated notebooks are available on #link("%22https://github.com/simpeg/tle-finitevolume%22")[GitHub] and can be run online with #link("%22http://mybinder.org/repo/simpeg/tle-finitevolume%22")[MyBinder];.]
+      ),
+          (
         title: "Funding",
-        content: [
-          true
-        ],
+        content: [Funding was provided by the Vanier Award to each of Cockett and Heagy.]
       ),
-              (
+          (
         title: "Competing Interests",
-        content: [
-          The authors declare no competing interests.
-
-        ],
+        content: [The authors declare no competing interests.]
       ),
       ),
 

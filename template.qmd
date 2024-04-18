@@ -27,16 +27,20 @@ institute:
 keyword: [Finite Volume, Tutorial, Reproducible Research]
 kind: Notebook Tutorial
 theme: "`red.darken(50%)`{=typst}"
-keypoints: 
-  - point: This project found **super** interesting stuff.
-  - point: This paper discusses what we found.
-  - point: You can use ~markdown~ here.
-datastatement: |
-  Associated notebooks are available on [GitHub]("https://github.com/simpeg/tle-finitevolume") and can be run online with [MyBinder]("http://mybinder.org/repo/simpeg/tle-finitevolume").
-funding: |
-  Funding was provided by the Vanier Award to each of Cockett and Heagy.
-interests: |
-  The authors declare no competing interests.
+
+margin-content:
+  - title: Key Points
+    content: |
+      * key point 1 is *important*.
+      * key point 2 is also important.
+      * this is the third idea.
+  - title: Data Statement
+    content: Associated notebooks are available on [GitHub]("https://github.com/simpeg/tle-finitevolume") and can be run online with [MyBinder]("http://mybinder.org/repo/simpeg/tle-finitevolume").
+  - title: Funding
+    content: Funding was provided by the Vanier Award to each of Cockett and Heagy.
+  - title: Competing Interests
+    content: The authors declare no competing interests.
+
 mainfont: Fira Sans
 format: quarto-lapreprint-typst
 

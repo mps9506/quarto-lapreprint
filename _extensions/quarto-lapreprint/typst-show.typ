@@ -87,55 +87,16 @@ $if(kind)$
   kind: [$kind$],
 $endif$
 
+$if(margin-content)$
   margin: (
-    $if(keypoints)$
+    $for(margin-content)$
       (
-        title: "Key Points",
-        content: [
-          $for(keypoints)$
-          - $it.point$
-          $endfor$
-        ],
+        title: "$it.title$",
+        content: [$it.content$]
       ),
-    $endif$
-    $if(by-author)$
-    $for(by-author)$
-    $if(it.email)$
-      (
-        title: "Correspondence to",
-        content: [
-          $it.name.literal$
-          #link("mailto:$it.email$")[$it.email$]
-          ],
-      ),
-    $endif$
     $endfor$
-    $endif$
-    $if(datastatement)$
-      (
-        title: "Data Availability",
-        content: [
-          $datastatement$
-        ],
-      ),
-    $endif$
-    $if(funding)$
-      (
-        title: "Funding",
-        content: [
-          $funding$
-        ],
-      ),
-    $endif$
-    $if(interests)$
-      (
-        title: "Competing Interests",
-        content: [
-          $interests$
-        ],
-      ),
-    $endif$
   ),
+$endif$
 
 $if(bibliography)$
   bibliography-file: "$bibliography$",
