@@ -105,6 +105,9 @@ $endif$
 
 $if(bibliography)$
   bibliography-file: "$bibliography$",
+  $if(biblio-style)$
+  bibliography-style: "$biblio-style$",
+  $endif$ 
 $endif$
 
 

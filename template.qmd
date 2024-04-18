@@ -55,6 +55,7 @@ mainfont: Fira Sans
 format: quarto-lapreprint-typst
 
 bibliography: main.bib
+biblio-style: ieee
 keep-typ: true
 ---
 

@@ -549,6 +549,8 @@
       ),
 
   bibliography-file: "main.bib",
+    bibliography-style: "ieee",
+   
 
 
 )
