@@ -1,7 +1,9 @@
 ---
 title: Pixels and their Neighbours
-
 abstract:  "`#lorem(100)`{=typst}"
+keyword: [Finite Volume, Tutorial, Reproducible Research]
+
+theme: "`red.darken(50%)`{=typst}"
 subtitle: A Tutorial on Finite Volume
 short-title: Finite Volume Tutorial
 pub-date: 
@@ -14,11 +16,12 @@ pub-date:
 venue: "`[ar#text(fill: red.darken(20%))[X]iv]`{=typst}"
 logo: files/logo.png
 doi: 10.1190/tle35080703.1
+
 authors:
   - name: Rowan Cockett
     orcid: 0000-0002-7859-8394
     email: rowan@curvenote.com
-    affiliations: 1,2
+    affiliations: 1,2,🖂
   - name: Lindsey Heagy
     orcid: 0000-0002-1551-5926
     affiliations: 1
@@ -30,9 +33,8 @@ institute:
     name: University of British Columbia
   - id: 2
     name: Curvenote Inc.
-keyword: [Finite Volume, Tutorial, Reproducible Research]
+
 kind: Notebook Tutorial
-theme: "`red.darken(50%)`{=typst}"
 
 margin-content:
   - title: Key Points
@@ -40,6 +42,8 @@ margin-content:
       * key point 1 is *important*.
       * key point 2 is also important.
       * this is the third idea.
+  - title: Corresponding Author
+    content: 🖂 [rowan@curvenote.com](mailto:rowan@curvenote.com)
   - title: Data Statement
     content: Associated notebooks are available on [GitHub]("https://github.com/simpeg/tle-finitevolume") and can be run online with [MyBinder]("http://mybinder.org/repo/simpeg/tle-finitevolume").
   - title: Funding
@@ -49,7 +53,6 @@ margin-content:
 
 mainfont: Fira Sans
 format: quarto-lapreprint-typst
-
 
 bibliography: main.bib
 keep-typ: true

@@ -483,7 +483,7 @@
   theme: red.darken(50%),
   authors: (
     ( name: "Rowan Cockett",
-      affiliations: "1,2", "true",
+      affiliations: "1,2,🖂", "true",
       orcid: "0000-0002-7859-8394" ),
     ( name: "Lindsey Heagy",
       affiliations: "1", "true",
@@ -529,6 +529,10 @@
 - this is the third idea.
 
 ]
+      ),
+          (
+        title: "Corresponding Author",
+        content: [🖂 #link("mailto:rowan@curvenote.com")[rowan\@curvenote.com];]
       ),
           (
         title: "Data Statement",
