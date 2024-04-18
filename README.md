@@ -51,7 +51,7 @@ authors:
   - name: Rowan Cockett
     orcid: 0000-0002-7859-8394
     email: rowan@curvenote.com
-    affiliations: 1,2
+    affiliations: 1,2,🖂
   - name: Lindsey Heagy
     orcid: 0000-0002-1551-5926
     affiliations: 1
@@ -65,12 +65,8 @@ institute:
     name: Curvenote Inc.
 ```
 
+For other information that you wish to affiliate with a specific author, you can use the `affiliations` field with any identifier you like (e.g. `†` or `🖂`) and then use the margin content or affiliations fields on the preprint to explain what it means.
 
-Note that the orcid and email icons are actually aligned to the text. Details, details!
-
-For other information that you wish to affiliate with a specific author, you can use the `affiliations` field with any identifier you like (e.g. `†`) and then use the margin content or affiliations fields on the preprint to explain what it means.
-
-Corresponding author information will be added to the margin for authors with an email address.
 
 ### Abstract and keywords
 
@@ -84,7 +80,9 @@ keyword: [Finite Volume, Tutorial, Reproducible Research]
 
 ### Margin content
 
-The content on the first page is customizable. The first content is the `kind`, for example, "Original Research", "Review Article", "Retrospective" etc. And then the `pub-date`, which is by default the date you compiled the document.
+The content on the first page is customizable. The first content is the `kind`, for example, "Original Research", "Review Article", "Retrospective" etc. And then the `pub-date`, which is by default the date you compiled the document if not specified. Note that currently you must use the Typst `datetime` format[^date].
+
+[^date]: I'd prefer to use raw strings here, but I'm confused about how Quarto handles dates and how to pass them to Typst which has its own builtin date handling functions. So this is subject to change.
 
 ```yaml
 kind: "Notebook Tutorial"
@@ -95,7 +93,13 @@ You can also set `pub-date` to be a dictionary or list of dictionaries with `tit
 
 ```yaml
 kind: "Notebook Tutorial"
-pub-date: '`((title: "Published", date: datetime(year: 2023, month: 08, day: 21)), (title: "Accepted", date: datetime(year: 2022, month: 12, day: 10)), (title: "Submitted", date: datetime(year: 2022, month: 12, day: 10)))`{=typst}'
+pub-date: 
+  - title: Published
+    date: "`datetime(year: 2023, month: 08, day: 21)`{=typst}"
+  - title: Accepted
+    date: "`datetime(year: 2022, month: 12, day: 10)`{=typst}"
+  - title: "Submitted"
+    date: "`datetime(year: 2022, month: 12, day: 10)`{=typst}"
 ```
 
 ### Headers and Footers
@@ -123,31 +127,37 @@ The footers show the `venue` (e.g. the journal or preprint repository) the `date
 ### Incomplete
 
 
-**margins**
+### Margins
 
-The rest of the margin content can be set with `margin` property, which takes a `title` and `content`, content is required, however the title is optional.
+The rest of the margin content can be set with `margin` property, which takes a `title` and `content`.
 
-```typst
-margin: (
-  (
-    title: "Correspondence to",
-    content: [
-      Rowan Cockett\
-      #link("mailto:rowan@curvenote.com")[rowan\@curvenote.com]
-    ],
-  ),
-  // ... other properties
-)
+```yaml
+margin-content:
+  - title: Key Points
+    content: |
+      * key point 1 is *important*.
+      * key point 2 is also important.
+      * this is the third idea.
+  - title: Corresponding Author
+    content: 🖂 [rowan@curvenote.com](mailto:rowan@curvenote.com)
+  - title: Data Statement
+    content: Associated notebooks are available on [GitHub]("https://github.com/simpeg/tle-finitevolume") and can be run online with [MyBinder]("http://mybinder.org/repo/simpeg/tle-finitevolume").
+  - title: Funding
+    content: Funding was provided by the Vanier Award to each of Cockett and Heagy.
+  - title: Competing Interests
+    content: The authors declare no competing interests.
 ```
 
 You can use the margin property for things like funding, data availability statements, explicit correspondence requests, key points, conflict of interest statements, etc.
 
 
-**bibliography**
+### Bibliography
 
-typst handles the bibliography.
+typst handles the bibliography. `bibliography` points to the .bib file and `biblio-style` specifies the styling[^biblio]. Available styles are documented by Typst: https://typst.app/docs/reference/model/bibliography/. In text references and cross references should be written as specified in pandoc/Quarto: (https://quarto.org/docs/authoring/footnotes-and-citations.html#sec-citations).
+
+[^biblio]: This might change in the future to using (or providing the option of) pandoc's builtin citeproc. 
 
 ```yaml
 bibliography: main.bib
-style: apa #not implemented yet
+biblio-style: apa 
 ```
