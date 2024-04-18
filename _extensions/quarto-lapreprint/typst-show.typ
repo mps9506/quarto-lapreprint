@@ -49,7 +49,12 @@ $endfor$
 $endif$
 
 $if(pub-date)$
-  date: $pub-date$,
+  date: (
+    $for(pub-date)$
+    (title:"$it.title$",
+    date:$it.date$),
+    $endfor$
+  ),
 $endif$
 
 $if(institute)$

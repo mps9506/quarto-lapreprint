@@ -493,7 +493,14 @@
       orcid: "0000-0002-4327-2124" ),
     ),
 
-  date: ((title: "Published", date: datetime(year: 2023, month: 08, day: 21)), (title: "Accepted", date: datetime(year: 2022, month: 12, day: 10)), (title: "Submitted", date: datetime(year: 2022, month: 12, day: 10))),
+  date: (
+        (title:"Published",
+    date:datetime(year: 2023, month: 08, day: 21)),
+        (title:"Accepted",
+    date:datetime(year: 2022, month: 12, day: 10)),
+        (title:"Submitted",
+    date:datetime(year: 2022, month: 12, day: 10)),
+      ),
 
   affiliations: (
     ( id: "1",

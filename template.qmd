@@ -4,7 +4,13 @@ title: Pixels and their Neighbours
 abstract:  "`#lorem(100)`{=typst}"
 subtitle: A Tutorial on Finite Volume
 short-title: Finite Volume Tutorial
-pub-date: '`((title: "Published", date: datetime(year: 2023, month: 08, day: 21)), (title: "Accepted", date: datetime(year: 2022, month: 12, day: 10)), (title: "Submitted", date: datetime(year: 2022, month: 12, day: 10)))`{=typst}'
+pub-date: 
+  - title: Published
+    date: "`datetime(year: 2023, month: 08, day: 21)`{=typst}"
+  - title: Accepted
+    date: "`datetime(year: 2022, month: 12, day: 10)`{=typst}"
+  - title: "Submitted"
+    date: "`datetime(year: 2022, month: 12, day: 10)`{=typst}"
 venue: "`[ar#text(fill: red.darken(20%))[X]iv]`{=typst}"
 logo: files/logo.png
 doi: 10.1190/tle35080703.1
