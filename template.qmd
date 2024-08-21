@@ -6,7 +6,7 @@ keyword: [Finite Volume, Tutorial, Reproducible Research]
 theme: "`red.darken(50%)`{=typst}"
 subtitle: A Tutorial on Finite Volume
 short-title: Finite Volume Tutorial
-pub-date: 
+pub-date:
   - title: Published
     date: "`datetime(year: 2023, month: 08, day: 21)`{=typst}"
   - title: Accepted
@@ -28,12 +28,12 @@ authors:
   - name: Douglas Oldenburg
     orcid: 0000-0002-4327-2124
     affiliations: 1
-institute:
+
+affiliations:
   - id: 1
     name: University of British Columbia
   - id: 2
     name: Curvenote Inc.
-
 kind: Notebook Tutorial
 
 margin-content:
@@ -65,7 +65,7 @@ DC resistivity surveys obtain information about subsurface electrical conductivi
 
 ![Setup of a DC resistivity survey.](files/dc-setup.png){width=60% #fig-dc-setup}
 
-```{=typst} 
+```{=typst}
 // You can put this after the content that fits on the first page to set the margins back to full-width
 #set page(margin: auto)
 ```
